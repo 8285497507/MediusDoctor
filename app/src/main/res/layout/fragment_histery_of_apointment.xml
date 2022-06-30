@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/rel_historyhospital"
+    tools:context=".fragments.HisteryOfApointmentFragment">
+    <include
+        android:id="@+id/tlb1"
+        layout="@layout/toolbar2" />
+
+
+    <View
+        android:id="@+id/view1"
+        android:layout_below="@+id/tlb1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#757575"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/text_field"
+        android:gravity="center"
+        android:minHeight="@dimen/_30sdp"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinnerState"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:entries="@array/Hospitialname"
+            android:fontFamily="@font/seogei"
+            android:padding="@dimen/_5sdp"
+
+            android:pointerIcon="arrow" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--    <devs.mulham.horizontalcalendar.HorizontalCalendarView-->
+    <!--        android:visibility="gone"-->
+    <!--        android:layout_margin="@dimen/_5ssp"-->
+    <!--        android:background="@drawable/text_field"-->
+    <!--        android:id="@+id/calendarView"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        app:selectedDateBackground="@color/white"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:selectorColor="@android:color/holo_red_dark"-->
+    <!--        app:textColorNormal="@color/gray"-->
+    <!--        app:textColorSelected="@color/purple_200" />-->
+    <com.github.jhonnyx2012.horizontalpicker.HorizontalPicker
+        android:id="@+id/schedule_datePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:visibility="gone"
+        android:layout_marginTop="0dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1"
+        android:layout_marginStart="@dimen/_5ssp"
+        android:layout_marginTop="@dimen/_5ssp"
+        android:layout_marginEnd="@dimen/_5ssp"
+        android:layout_marginBottom="@dimen/_5ssp"
+        android:background="@color/white"></androidx.recyclerview.widget.RecyclerView>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/mFoatingAddHospital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/ic_group_193"
+        android:elevation="@dimen/_10sdp"
+        android:scaleType="fitXY" />
+
+
+</RelativeLayout>

@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ProfileDetailFragment">
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_marginTop="@dimen/_10sdp"
+    android:id="@+id/mainlayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/BasicDetail"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/_5ssp"
+        android:padding="@dimen/_5ssp"
+        app:cardCornerRadius="@dimen/_5ssp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/onbasicdetail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:src="@drawable/ic_profiledetail"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/basictitel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/material_motion_duration_long_1"
+                    android:fontFamily="@font/robotolight"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center"
+                    android:minHeight="@dimen/_25sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/BasicDetail"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    app:drawableRightCompat="@drawable/ccp_ic_arrow_drop_down" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/profileedite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:minWidth="@dimen/_25sdp"
+                    android:minHeight="@dimen/_25sdp"
+                    android:src="@drawable/ic_group_190" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/QulifactionDetail"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/_5ssp"
+        android:padding="@dimen/_5ssp"
+        app:cardCornerRadius="@dimen/_5ssp"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/qulifaction_viseval"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:src="@drawable/ic_qualificationdetail"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/qulifactiontitel"
+                    android:layout_weight="@integer/material_motion_duration_long_1"
+                    app:drawableRightCompat="@drawable/ccp_ic_arrow_drop_down"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_12sdp"
+                    android:minHeight="@dimen/_25sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:text="@string/QulifactionDetail"
+                    android:fontFamily="@font/robotolight"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/QulifactionDetailedit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/_25sdp"
+                    android:minHeight="@dimen/_25sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_group_190" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/addlayout"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/specializationDetail"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/_5ssp"
+        android:padding="@dimen/_5ssp"
+        app:cardCornerRadius="@dimen/_5ssp"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/speclization_lin"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">            <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/speclizationtitel"
+                android:layout_weight="@integer/material_motion_duration_long_1"
+                app:drawableRightCompat="@drawable/ccp_ic_arrow_drop_down"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:textSize="@dimen/_12sdp"
+                android:minHeight="@dimen/_25sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/black"
+                android:text="@string/Splization"
+                android:fontFamily="@font/robotolight"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/splizationadd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/_25sdp"
+                android:minHeight="@dimen/_25sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_add_24" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/listview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:nestedScrollingEnabled="true"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/RegistationDetail"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/_5ssp"
+        android:padding="@dimen/_5ssp"
+        app:cardCornerRadius="@dimen/_5ssp"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/registation_visvalti"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:src="@drawable/ic_registrationdetail"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/registationtitel"
+                android:layout_weight="@integer/material_motion_duration_long_1"
+                app:drawableRightCompat="@drawable/ccp_ic_arrow_drop_down"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:textSize="@dimen/_12sdp"
+                android:minHeight="@dimen/_25sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:padding="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/robotolight"
+                android:textColor="@color/black"
+                android:text="@string/RegistationDetail"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/registationdetailedit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/_25sdp"
+                android:minHeight="@dimen/_25sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_group_190" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/KycDetail"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/_5ssp"
+        android:padding="@dimen/_5ssp"
+        app:cardCornerRadius="@dimen/_5ssp"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.LinearLayoutCompat
+
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/kycvisvelty"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:src="@drawable/ic_paymentdetail"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/kyctitel"
+                    android:layout_weight="@integer/material_motion_duration_long_1"
+                    app:drawableRightCompat="@drawable/ccp_ic_arrow_drop_down"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_12sdp"
+                    android:minHeight="@dimen/_25sdp"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:text="Payment Details"
+                    android:fontFamily="@font/robotolight"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/kycedit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/_25sdp"
+                    android:minHeight="@dimen/_25sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:elevation="@dimen/_15sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@drawable/ic_group_190" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/HospitalDetail"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/_5ssp"
+        android:padding="@dimen/_5ssp"
+        app:cardCornerRadius="@dimen/_5ssp"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/hospitalvis"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/hospitaltitel"
+                  android:layout_weight="@integer/material_motion_duration_long_1"
+                    app:drawableRightCompat="@drawable/ccp_ic_arrow_drop_down"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_12sdp"
+                    android:minHeight="@dimen/_25sdp"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:fontFamily="@font/robotolight"
+                    android:textColor="@color/black"
+                    android:text="@string/PracticeDetail"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/hospitaladd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/_25sdp"
+                    android:minHeight="@dimen/_25sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_add_24" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyHospital"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/addlayout"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardStat"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/_5ssp"
+        android:padding="@dimen/_5ssp"
+        app:cardCornerRadius="@dimen/_5ssp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/white">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:src="@drawable/ic_apppintmentstat"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_weight="@integer/material_motion_duration_long_1"
+                app:drawableRightCompat="@drawable/ccp_ic_arrow_drop_down"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:textSize="@dimen/_12sdp"
+                android:minHeight="@dimen/_25sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:padding="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:text="Appointment Stat"
+                android:fontFamily="@font/robotolight"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/_25sdp"
+                android:minHeight="@dimen/_25sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_group_190" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardviewApnmtnHistory"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/_5ssp"
+        android:padding="@dimen/_5ssp"
+        app:cardCornerRadius="@dimen/_5ssp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/white">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:src="@drawable/ic_appointmenthistory"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_weight="@integer/material_motion_duration_long_1"
+                app:drawableRightCompat="@drawable/ccp_ic_arrow_drop_down"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:textSize="@dimen/_12sdp"
+                android:minHeight="@dimen/_25sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:padding="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:text="Appointment History"
+                android:fontFamily="@font/robotolight"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/_25sdp"
+                android:minHeight="@dimen/_25sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_group_190" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardnotification"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/_5ssp"
+        android:padding="@dimen/_5ssp"
+        app:cardCornerRadius="@dimen/_5ssp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+
+            android:background="@color/white">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:src="@drawable/ic_notification"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_weight="@integer/material_motion_duration_long_1"
+                app:drawableRightCompat="@drawable/ccp_ic_arrow_drop_down"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:textSize="@dimen/_12sdp"
+                android:minHeight="@dimen/_25sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:padding="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:text="Notification"
+                android:fontFamily="@font/robotolight"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/_25sdp"
+                android:minHeight="@dimen/_25sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_group_190" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mCardholidaycalendar"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:padding="@dimen/_5ssp"
+        app:cardCornerRadius="@dimen/_5ssp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/holidaycalendar"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/white">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:src="@drawable/ic_group_198"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_weight="@integer/material_motion_duration_long_1"
+                app:drawableRightCompat="@drawable/ccp_ic_arrow_drop_down"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:textSize="@dimen/_12sdp"
+                android:minHeight="@dimen/_25sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:padding="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:text="Holiday Calendar"
+                android:fontFamily="@font/robotolight"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/_25sdp"
+                android:minHeight="@dimen/_25sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_group_190" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:padding="@dimen/_5ssp"
+        android:visibility="invisible"
+        app:cardCornerRadius="@dimen/_5ssp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/white">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:src="@drawable/ic_notification"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_weight="@integer/material_motion_duration_long_1"
+                app:drawableRightCompat="@drawable/ccp_ic_arrow_drop_down"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:textSize="@dimen/_12sdp"
+                android:minHeight="@dimen/_25sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:padding="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:text="Holiday Calendar"
+                android:fontFamily="@font/robotolight"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/_25sdp"
+                android:minHeight="@dimen/_25sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_group_190" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>

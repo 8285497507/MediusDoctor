@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".activity.ThankYouActivity">
+    <include
+        layout="@layout/toolbar"
+        ></include>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_msg"
+        android:layout_centerInParent="true"
+        android:text="Thank You"
+        android:textColor="@color/app_theme"
+        android:textSize="@dimen/_23ssp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:text="Your Profile will be verified soon."
+        android:textColor="@color/app_theme"
+        android:textSize="@dimen/_14ssp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/tv_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/verify_button"
+        android:text="OK"
+        android:textColor="@color/white" />
+</RelativeLayout>

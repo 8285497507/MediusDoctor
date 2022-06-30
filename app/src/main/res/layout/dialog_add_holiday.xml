@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bg_sp">
+
+        <TextView
+            android:id="@+id/appname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/robotobold"
+            android:gravity="center"
+            android:text="ADD HOLIDAY"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp" />
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appname"
+            android:fontFamily="@font/robotoregular"
+            android:gravity="center"
+            android:text="Are you sure want to add holiday ?"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp" />
+
+        <LinearLayout
+            android:layout_below="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/mTxtViewYes"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/robotolight"
+                android:textSize="@dimen/_12sdp"
+                android:text="Yes"/>
+
+            <View
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="match_parent"
+                android:background="@color/white"/>
+
+            <TextView
+                android:id="@+id/mtxtViewLater"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/robotolight"
+                android:textSize="@dimen/_12sdp"
+                android:text="No"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

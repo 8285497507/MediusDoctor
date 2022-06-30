@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/edit_box_drawable"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/_5ssp"
+    android:layout_gravity="center_vertical"
+    tools:context=".activity.Activity_Qualification_Details">
+    <include layout="@layout/toolbar" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:minHeight="@dimen/_200sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Degree*"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_10sdp" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/q_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:background="@drawable/text_field"
+                    android:fontFamily="@font/seogei"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/_30sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/img3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/_25sdp"
+                    android:background="@drawable/ic_arrowdown" />
+
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@+id/text_view1"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:background="#717171" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recy_degreeadd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view3"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/robotoregular"
+                android:text="Organization*"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_10sdp" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/q_org"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:minHeight="@dimen/_20sdp"
+                android:padding="@dimen/_5sdp"
+                android:focusable="true"
+                android:textColor="@color/textcolor"
+                android:textColorHint="@color/textcolor" />
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/seogei"
+                android:inputType="text"
+                android:text="Duration"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_From"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/seogei"
+                    android:text="From"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/q_duration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:background="@drawable/text_field"
+                    android:fontFamily="@font/seogei"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/_28sdp"
+                    android:padding="@dimen/_5ssp"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_till"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/seogei"
+                    android:gravity="center_vertical"
+                    android:text="Till"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/q_till"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:background="@drawable/text_field"
+                    android:fontFamily="@font/seogei"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/_28sdp"
+                    android:padding="@dimen/_5ssp"
+                    android:textColor="@color/black" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/seogei"
+                android:text="Email ID"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/q_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:background="@drawable/text_field"
+                android:fontFamily="@font/seogei"
+                android:gravity="center_vertical"
+                android:inputType="textEmailAddress"
+                android:minHeight="@dimen/_30sdp"
+                android:padding="@dimen/_5ssp"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/verify_button"
+                android:fontFamily="@font/seogei"
+                android:gravity="center"
+                android:minWidth="@dimen/_150sdp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:elevation="10dp"
+        android:gravity="top|end"
+        android:minHeight="@dimen/_30sdp"
+        android:orientation="horizontal">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/q_add"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_weight="@integer/material_motion_duration_long_1"
+            android:background="@drawable/button"
+            android:gravity="center"
+            android:text="Clear"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_15sdp"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/q_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/button"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:minWidth="@dimen/_30sdp"
+            android:minHeight="@dimen/_30sdp"
+            android:scaleType="fitXY"
+            android:text="Close"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_baseline_cancel_24" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
+
+
+

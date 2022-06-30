@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/_200sdp"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".add_new_session">
+
+
+
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+
+
+     <include layout="@layout/toolbar" />
+
+     <ImageView
+         android:id="@+id/cancelimg"
+         android:layout_width="@dimen/_20sdp"
+         android:layout_height="@dimen/_20sdp"
+         android:layout_alignParentRight="true"
+         android:layout_marginTop="@dimen/_5sdp"
+         android:layout_marginRight="@dimen/_5sdp"
+         android:src="@drawable/ic_baseline_cancel_24" />
+
+    <LinearLayout
+        android:id="@+id/contenclayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/to_Time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/seogei"
+            android:hint="Session Start time"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/black"
+
+            android:textColorHint="@color/gray" />
+
+
+        <!--            android:background="@drawable/dialog_box"-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_gravity="center"
+            android:background="@color/black">
+
+        </View>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/till_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Session End time "
+            android:padding="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/seogei"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_gravity="center"
+            android:background="@color/black">
+
+        </View>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/capicity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Capacity"
+            android:inputType="number"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            android:fontFamily="@font/seogei"
+            android:textColor="@color/black"
+            android:background="@null"
+            android:textColorHint="@color/gray" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:visibility="gone"
+            android:id="@+id/switchCompat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Working Day"
+            android:textColor="@color/black"
+            android:fontFamily="@font/seogei"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+        <!--        android:background="@drawable/dialog_box"-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_gravity="center"
+            android:background="@color/black">
+
+        </View>
+
+
+    </LinearLayout>
+
+     <androidx.appcompat.widget.LinearLayoutCompat
+
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/contenclayout"
+         android:gravity="center"
+         android:minHeight="@dimen/_45sdp">
+
+         <androidx.appcompat.widget.AppCompatButton
+             android:id="@+id/btn_next"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_margin="@dimen/_10sdp"
+             android:background="@drawable/button"
+             android:fontFamily="@font/seogei"
+             android:gravity="center"
+             android:minWidth="@dimen/_150sdp"
+             android:text="Save"
+             android:textAllCaps="false"
+             android:textColor="@color/white"
+             android:textSize="@dimen/_15sdp"
+             android:textStyle="bold" />
+
+
+     </androidx.appcompat.widget.LinearLayoutCompat>
+ </RelativeLayout>
+</RelativeLayout>

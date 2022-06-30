@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".schedule_appointment"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/addnewsession_bg"
+            android:backgroundTint="@color/blue"
+            android:padding="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_9sdp"
+            android:text="Add new session"
+            android:fontFamily="@font/seogei"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:hint="Session end time "
+            android:padding="@dimen/_5sdp"
+            android:fontFamily="@font/seogei"
+            android:textColorHint="@color/black" />
+        <!--            android:background="@drawable/dialog_box"-->
+
+        <View
+            android:layout_width="@dimen/_279sdp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:background="@color/black">
+
+        </View>
+
+        <EditText
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:hint="Session start time"
+            android:padding="@dimen/_5sdp"
+            android:fontFamily="@font/seogei"
+            android:textColorHint="@color/black" />
+
+        <View
+            android:layout_width="@dimen/_279sdp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:background="@color/black">
+
+        </View>
+
+        <EditText
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:hint="Capacity"
+            android:padding="@dimen/_5sdp"
+            android:fontFamily="@font/seogei"
+            android:textColorHint="@color/black" />
+        <!--        android:background="@drawable/dialog_box"-->
+        <View
+            android:layout_width="@dimen/_279sdp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:background="@color/black">
+
+        </View>
+
+
+        <Button
+            android:id="@+id/save_session"
+            android:layout_width="@dimen/_95sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/send_otp_btn"
+            android:text="Save"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/seogei"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

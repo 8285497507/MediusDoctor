@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:minHeight="@dimen/_200sdp"
+    android:layout_margin="@dimen/_5ssp"
+    android:layout_gravity="center_vertical"
+    tools:context=".fragments.AddconsultationFeeFragment">
+
+    <include layout="@layout/toolbar" />
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="@dimen/_5ssp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/H_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/text_field"
+            android:hint="Name"
+            android:fontFamily="@font/seogei"
+            android:minHeight="@dimen/_30sdp"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:visibility="gone"
+            android:id="@+id/H_capicity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/text_field"
+            android:hint="Capicity"
+            android:fontFamily="@font/seogei"
+            android:inputType="number"
+            android:minHeight="@dimen/_30sdp"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/black"
+
+            android:textColorHint="@color/gray" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/_30sdp"
+            android:text="consultation Fee"
+            android:textColor="@color/black"
+            android:fontFamily="@font/seogei"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5ssp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/H_max"
+                android:fontFamily="@font/seogei"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/text_field"
+                android:inputType="number"
+                android:minHeight="@dimen/_30sdp"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/white11" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:visibility="gone"
+                android:id="@+id/H_min"
+                android:fontFamily="@font/seogei"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/text_field"
+                android:hint="Min"
+                android:inputType="number"
+                android:minHeight="@dimen/_30sdp"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/black"
+
+                android:textColorHint="@color/gray" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button"
+            android:minWidth="@dimen/_150sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="Save"
+            android:fontFamily="@font/seogei"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

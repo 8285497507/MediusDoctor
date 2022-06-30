@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "58087248008",
+    "project_id": "medius-doctor-app-b1e21",
+    "storage_bucket": "medius-doctor-app-b1e21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58087248008:android:198563937c3d48b294cf3d",
+        "android_client_info": {
+          "package_name": "com.example.newdoctorsap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58087248008-hrhh1t8v3od8vf3o6h3l8g1n4iaf8f0t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVDPbYNm8_cC7Ng3JyJHWisvC9uebDpGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "58087248008-hrhh1t8v3od8vf3o6h3l8g1n4iaf8f0t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

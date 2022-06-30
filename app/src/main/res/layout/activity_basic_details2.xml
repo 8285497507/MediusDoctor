@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activity.Basic_Details_Activity">
+
+    <include layout="@layout/toolbar" />
+
+    <View
+        android:id="@+id/view13"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#757575"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view13"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view1"
+                android:layout_margin="@dimen/_6sdp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/line_fill" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/line_shodow" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/line_shodow" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/line_shodow" />
+
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="@dimen/_160sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_groupprofile" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:fontFamily="@font/seogei"
+                android:text="Frist Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_9sdp"
+                android:focusable="true"
+                android:textColor="@color/menublack"
+                android:textColorHint="@color/menublack"
+                app:boxBackgroundColor="@color/white">
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotoregular"
+                    android:hint="First Name*"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--            <androidx.appcompat.widget.AppCompatEditText-->
+            <!--                android:id="@+id/name"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginLeft="@dimen/_9sdp"-->
+            <!--                android:layout_marginTop="@dimen/_4sdp"-->
+            <!--                android:layout_marginRight="@dimen/_9sdp"-->
+            <!--                android:background="@drawable/text_field"-->
+            <!--                android:fontFamily="@font/seogei"-->
+            <!--                android:gravity="center_vertical"-->
+            <!--                android:inputType="text"-->
+            <!--                android:minHeight="@dimen/_30sdp"-->
+            <!--                android:paddingLeft="@dimen/_15sdp"-->
+            <!--                android:textColor="@color/black" />-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_lasrname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:fontFamily="@font/seogei"
+                android:text="Last Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinputlastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_9sdp"
+                android:focusable="true"
+                android:hint="Last Name*"
+                android:textColor="@color/menublack"
+                android:textColorHint="@color/menublack"
+                app:boxBackgroundColor="@color/white">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/lastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/seogei"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:minHeight="@dimen/_30sdp"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:focusable="true"
+                android:hint="Whatsapp No*"
+                android:textColor="@color/menublack"
+                android:textColorHint="@color/menublack"
+                android:visibility="gone"
+                app:boxBackgroundColor="@color/white">
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/ws_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_9sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginRight="@dimen/_9sdp"
+                    android:fontFamily="@font/seogei"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:minHeight="@dimen/_30sdp"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:focusable="true"
+                android:hint="Email ID*"
+                android:textColor="@color/menublack"
+                android:textColorHint="@color/menublack"
+                app:boxBackgroundColor="@color/white">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_9sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginRight="@dimen/_9sdp"
+                    android:fontFamily="@font/seogei"
+                    android:gravity="center_vertical"
+                    android:inputType="textEmailAddress"
+                    android:minHeight="@dimen/_30sdp"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Date Of Birth "
+                    android:textColor="@color/menublack"
+                    android:textSize="@dimen/_12sdp" />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_toRightOf="@+id/text_view3">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/dob4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:fontFamily="@font/seogei"
+                        android:inputType="date"
+                        android:text="DD"
+                        android:textColor="@color/textcolor" />
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/dob4"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:background="#717171" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_toRightOf="@+id/view1"
+                        android:text="/" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/dob2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_9sdp"
+                        android:layout_marginRight="@dimen/_9sdp"
+                        android:layout_toRightOf="@+id/view1"
+                        android:fontFamily="@font/seogei"
+                        android:gravity="center_vertical"
+                        android:inputType="date"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:text="MM"
+                        android:textColor="@color/textcolor" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/dob2"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_toRightOf="@+id/view1"
+                        android:background="#717171" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_toRightOf="@+id/view2"
+                        android:text="/" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/dob3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_toRightOf="@+id/view2"
+                        android:fontFamily="@font/seogei"
+                        android:inputType="date"
+                        android:text="YY"
+                        android:textColor="@color/textcolor" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/dob3"
+                        android:layout_marginLeft="@dimen/_7sdp"
+                        android:layout_marginRight="@dimen/_7sdp"
+                        android:layout_toRightOf="@+id/view2"
+                        android:background="#717171" />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Gender"
+                    android:textColor="@color/menublack"
+                    android:textSize="@dimen/_12sdp" />
+
+
+                <RadioGroup
+                    android:id="@+id/radiogroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_toRightOf="@+id/text_view2"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/male"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/radio_bg"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:text="Male"
+                        android:textColor="@color/menublack"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <RadioButton
+                        android:id="@+id/female"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/radio_bg"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:text="Female"
+                        android:textColor="@color/menublack"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <RadioButton
+                        android:id="@+id/others"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/red"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="Others"
+                        android:textColor="@color/menublack"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone">
+
+
+                    </RadioButton>
+                </RadioGroup>
+            </RelativeLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/seogei"
+                android:text="Phone No. "
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/p_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_9sdp"
+                android:background="@drawable/text_field"
+                android:gravity="center_vertical"
+                android:inputType="number"
+                android:minHeight="@dimen/_30sdp"
+                android:paddingLeft="@dimen/_15sdp"
+                android:textColor="@color/black"
+
+                android:visibility="gone" />
+
+
+            <!--            <androidx.appcompat.widget.AppCompatTextView-->
+            <!--                android:id="@+id/text_view5"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginLeft="@dimen/_9sdp"-->
+            <!--                android:layout_marginTop="@dimen/_8sdp"-->
+            <!--                android:fontFamily="@font/seogei"-->
+            <!--                android:text="Whatsapp No. "-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:textSize="@dimen/_12sdp" />-->
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+
+                android:id="@+id/text_view9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/seogei"
+                android:text="OverAll Exprience"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/exprience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_9sdp"
+                android:background="@drawable/text_field"
+                android:fontFamily="@font/seogei"
+                android:gravity="center_vertical"
+                android:inputType="textEmailAddress"
+                android:minHeight="@dimen/_30sdp"
+                android:paddingLeft="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/seogei"
+                android:text="Specialization"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone" />
+
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/text_field"
+                android:fontFamily="@font/seogei"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:paddingLeft="@dimen/_15sdp"
+                android:visibility="gone" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/seogei"
+                android:text="Location "
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/loc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_9sdp"
+                android:background="@drawable/text_field"
+                android:fontFamily="@font/seogei"
+                android:inputType="text"
+                android:minHeight="@dimen/_30sdp"
+                android:paddingLeft="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_view9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/seogei"
+                android:text="Use my current location "
+                android:textColor="#2196F3"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:id="@+id/addlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5ssp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/phone_number_linear_layout"
+                android:elevation="@dimen/_2sdp"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/_7sdp"
+                android:paddingBottom="@dimen/_7sdp"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seogei"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:text="Qualificaton"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15ssp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/q_add"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_85sdp"
+                    android:background="@drawable/button"
+                    android:fontFamily="@font/seogei"
+                    android:gravity="center"
+                    android:text="Add"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_7sdp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/q_remove"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:background="@drawable/button"
+                    android:fontFamily="@font/seogei"
+                    android:gravity="center"
+                    android:text="Remove"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_7sdp" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/addlayout"
+                android:layout_margin="@dimen/_5sdp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:minHeight="@dimen/_50sdp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:background="@drawable/verify_button"
+            android:fontFamily="@font/seogei"
+            android:minWidth="@dimen/_150sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_15sdp"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--    <include-->
+    <!--        layout="@layout/framlayout"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_below="@+id/toolbar" />-->
+
+</RelativeLayout>

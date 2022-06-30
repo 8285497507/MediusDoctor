@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragments.Appointments_fragment">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_2ssp"
+        android:layout_marginTop="@dimen/_20ssp"
+        android:layout_marginEnd="@dimen/_2ssp"
+        android:layout_marginBottom="@dimen/_2ssp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2ssp"
+
+            android:layout_weight="1"
+            android:background="@drawable/totalapoinment"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/totlalapointment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/seogei"
+                android:gravity="center"
+                android:minWidth="@dimen/_100sdp"
+                android:minHeight="@dimen/_50sdp"
+                android:text="500"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0.01dp"
+                android:layout_marginRight="0.01dp"
+                android:background="@drawable/profile1_text_view"
+                android:fontFamily="@font/seogei"
+                android:gravity="center"
+                android:minWidth="@dimen/_100sdp"
+                android:minHeight="@dimen/_50sdp"
+                android:text="Total Appointment"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                android:textColor="@color/white" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2ssp"
+
+            android:layout_weight="1"
+            android:background="@drawable/totalapoinment"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cancleapointment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/seogei"
+                android:gravity="center"
+                android:minWidth="@dimen/_100sdp"
+                android:minHeight="@dimen/_50sdp"
+                android:text="500"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0.01dp"
+                android:layout_marginRight="0.01dp"
+                android:background="@drawable/profile1_text_view"
+                android:fontFamily="@font/seogei"
+                android:gravity="center"
+                android:minWidth="@dimen/_100sdp"
+                android:minHeight="@dimen/_50sdp"
+                android:text="Cancel Appointment"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                android:textColor="@color/white" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2ssp"
+
+            android:layout_weight="1"
+            android:background="@drawable/totalapoinment"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/serveappointment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/seogei"
+                android:gravity="center"
+                android:minWidth="@dimen/_100sdp"
+                android:minHeight="@dimen/_50sdp"
+                android:text="500"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0.01dp"
+                android:layout_marginRight="0.01dp"
+                android:background="@drawable/profile1_text_view"
+                android:fontFamily="@font/seogei"
+                android:gravity="center"
+                android:minWidth="@dimen/_100sdp"
+                android:minHeight="@dimen/_50sdp"
+                android:text="Served Appointment"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                android:textColor="@color/white" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/histrilayout"
+        android:layout_margin="@dimen/_5ssp"
+        android:gravity="center"
+        android:layout_below="@+id/mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:elevation="@dimen/_15sdp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView"
+            android:src="@drawable/third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/_50sdp"
+            android:minWidth="@dimen/_50sdp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:elevation="@dimen/_15sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:fontFamily="@font/seogei"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/seogei"
+                android:singleLine="true"
+                android:text="All your appointments on medius"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

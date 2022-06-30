@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include layout="@layout/toolbar" />
+
+
+
+    <View
+        android:id="@+id/view1"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#757575"
+        />
+
+    <WebView
+        android:id="@+id/mWebView"
+        android:layout_below="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/txtmedius"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/view1"-->
+<!--        android:layout_marginLeft="@dimen/_20sdp"-->
+<!--        android:layout_marginTop="@dimen/_100sdp"-->
+<!--        android:layout_marginRight="@dimen/_20sdp"-->
+<!--        android:fontFamily="@font/robotolight"-->
+<!--        android:gravity="center"-->
+<!--        android:text="Medius is a healthcare start-up formed-->
+<!--with an aim to provide information about-->
+<!--every healthcare service across the-->
+<!--country. We provide information about-->
+<!--healthcare services so that you can make-->
+<!--an informed decision and prior to visiting-->
+<!--the place you would know it’s timing,-->
+<!--address, fee, and other details."-->
+<!--        android:textColor="@color/black" />-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_youtube"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_facebook"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_instagram"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_linkedin"/>
+        <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_twitter"/>
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5ssp"
+    app:cardCornerRadius="@dimen/_10ssp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/session_bg">
+
+
+
+    <LinearLayout
+        android:id="@+id/itemupdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/scheduletime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+             android:gravity="center"
+            android:fontFamily="@font/seogei"
+            android:minHeight="@dimen/_20sdp"
+            android:text="06:00 AM To 02:00 PM "
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/capecity"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_2sdp"
+            android:background="@drawable/slot_capacity_layout"
+            android:gravity="center"
+            android:fontFamily="@font/seogei"
+            android:minWidth="@dimen/_30sdp"
+            android:minHeight="@dimen/_20sdp"
+
+            android:text="10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:minWidth="@dimen/_30sdp"
+            android:minHeight="@dimen/_30sdp"
+            android:src="@drawable/ic_close" />
+    </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

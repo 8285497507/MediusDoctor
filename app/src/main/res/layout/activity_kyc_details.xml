@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Activity_Kyc_details"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/toolbar" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#757575"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/ll_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/view1"
+            android:layout_margin="@dimen/_6sdp"
+            >
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_3sdp"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/_4sdp"
+                android:background="@drawable/line_fill"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_3sdp"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/_4sdp"
+                android:background="@drawable/line_fill"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_3sdp"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/_4sdp"
+                android:background="@drawable/line_fill"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_3sdp"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/_4sdp"
+                android:background="@drawable/line_fill"/>
+
+
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/adtextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:fontFamily="@font/seogei"
+            android:text="AdharCard Number"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
+
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/adharcard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:background="@drawable/text_field"
+            android:fontFamily="@font/seogei"
+            android:gravity="center_vertical"
+            android:maxLength="12"
+            android:minHeight="@dimen/_30sdp"
+            android:padding="@dimen/_5ssp"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/txt_view1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="@dimen/_8sdp"-->
+<!--            android:layout_marginTop="@dimen/_3sdp"-->
+<!--            android:fontFamily="@font/seogei"-->
+<!--            android:text="PAN Card *"-->
+<!--            android:textColor="@color/black" />-->
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:focusable="true"
+            android:hint="Account Holder Name*"
+            android:textColor="@color/menublack"
+            android:textColorHint="@color/menublack"
+            app:boxBackgroundColor="@color/white">
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/acntholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/seogei"
+                android:gravity="center_vertical"
+                android:maxLength="10"
+                android:minHeight="@dimen/_30sdp"
+                android:singleLine="true"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:focusable="true"
+            android:hint="Account Number* "
+            android:textColor="@color/menublack"
+            android:textColorHint="@color/menublack"
+            app:boxBackgroundColor="@color/white">
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/bank_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:fontFamily="@font/seogei"
+                android:gravity="center_vertical"
+                android:inputType="number"
+                android:minHeight="@dimen/_30sdp"
+                android:singleLine="true"
+                android:textColorHint="#545454"
+
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:focusable="true"
+            android:hint="Bank Name* "
+            android:textColor="@color/menublack"
+            android:textColorHint="@color/menublack"
+            app:boxBackgroundColor="@color/white">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:fontFamily="@font/seogei"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/_30sdp"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:focusable="true"
+            android:hint="IFSC Number*"
+            android:textColor="@color/menublack"
+            android:textColorHint="@color/menublack"
+            app:boxBackgroundColor="@color/white">
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/ifsc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:fontFamily="@font/seogei"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/_30sdp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:focusable="true"
+            android:hint="PAN Number"
+            android:textColor="@color/menublack"
+            android:textColorHint="@color/menublack"
+            app:boxBackgroundColor="@color/white">
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/pan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_9sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/seogei"
+            android:gravity="center_vertical"
+            android:maxLength="10"
+            android:minHeight="@dimen/_30sdp"
+            android:singleLine="true"
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0.5dp"-->
+<!--            android:background="#717171"-->
+<!--            />-->
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/txt_view2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="@dimen/_8sdp"-->
+<!--            android:layout_marginTop="@dimen/_5sdp"-->
+<!--            android:fontFamily="@font/seogei"-->
+<!--            android:text="Bank Name *"-->
+<!--            android:textColor="@color/black" />-->
+
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0.5dp"-->
+<!--            android:background="#717171"-->
+<!--            />-->
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/txt_view3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="@dimen/_8sdp"-->
+<!--            android:layout_marginTop="@dimen/_5sdp"-->
+<!--            android:fontFamily="@font/seogei"-->
+<!--            android:text="Bank A/C No *"-->
+<!--            android:textColor="@color/black" />-->
+
+
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0.5dp"-->
+<!--            android:background="#717171"-->
+<!--            />-->
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/txt_view4"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="@dimen/_8sdp"-->
+<!--            android:layout_marginTop="@dimen/_5sdp"-->
+<!--            android:fontFamily="@font/seogei"-->
+<!--            android:text="IFSC Code *"-->
+<!--            android:textColor="@color/black" />-->
+
+
+
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0.5dp"-->
+<!--            android:background="#717171"-->
+<!--            />-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="@dimen/_30sdp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/_150sdp"
+            android:layout_gravity="center"
+            android:background="@drawable/verify_button"
+            android:text="Submit"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_2sdp"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_15sdp"
+            android:fontFamily="@font/seogei"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+</RelativeLayout>

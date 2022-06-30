@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include layout="@layout/toolbar" />
+
+
+
+    <View
+        android:id="@+id/view1"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#757575"
+        />
+
+
+    <LinearLayout
+        android:layout_below="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relativecontact"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/contactus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:fontFamily="@font/robotoregular"
+                android:text="Contact Us"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        <View
+            android:layout_below="@+id/contactus"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="#757575"
+            />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_noti"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/noti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:fontFamily="@font/robotoregular"
+                android:text="Notification Settings"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_below="@+id/noti"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="#757575"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_privacypolicy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/privacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:fontFamily="@font/robotoregular"
+                android:text="Privacy Policy"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_below="@+id/privacy"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="#757575"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_termscondn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:fontFamily="@font/robotoregular"
+                android:text="Terms and condition"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_below="@+id/terms"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="#757575"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_aboutus"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:fontFamily="@font/robotoregular"
+                android:text="About Us"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_below="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="#757575"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/rateus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:fontFamily="@font/robotoregular"
+                android:textStyle="bold"
+                android:text="Rate Us"
+                android:textColor="@color/black" />
+
+            <View
+                android:layout_below="@+id/rateus"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="#757575"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_logout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:fontFamily="@font/robotoregular"
+                android:text="Log Out"
+                android:textColor="@color/red"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_below="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="#757575"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#616060"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/seogei"
+        android:layout_marginBottom="@dimen/_100sdp"
+        android:text="Version 1.1"
+        />
+
+</RelativeLayout>

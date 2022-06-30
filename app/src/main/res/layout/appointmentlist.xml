@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5ssp"
+    android:elevation="@dimen/_10sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    app:cardCornerRadius="@dimen/_5ssp">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_5ssp"
+            android:layout_marginTop="@dimen/_5ssp"
+            android:layout_marginEnd="@dimen/_5ssp"
+
+            android:layout_marginBottom="@dimen/_5ssp"
+            android:maxWidth="@dimen/_90sdp"
+            android:maxHeight="@dimen/_90sdp"
+
+            android:padding="2dp"
+            android:src="@drawable/newprofile" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/namelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5ssp"
+            android:layout_marginTop="@dimen/_5ssp"
+            android:layout_marginEnd="@dimen/_5ssp"
+            android:layout_toRightOf="@id/imageView"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            tools:ignore="RtlHardcoded">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/Pacentname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/imageView"
+                android:fontFamily="@font/seogei"
+                android:text="Nishant Shah"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pacentDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hospitalname"
+                android:layout_toEndOf="@+id/imageView"
+                android:fontFamily="@font/seogei"
+                android:text="Male | 60 Years"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/hospitalname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hospitalname"
+                android:layout_toEndOf="@+id/imageView"
+                android:fontFamily="@font/seogei"
+                android:text="Male | 60 Years"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/namelayout"
+            android:layout_marginStart="@dimen/_5ssp"
+            android:layout_marginEnd="@dimen/_5ssp"
+            android:layout_marginBottom="@dimen/_5ssp"
+            android:layout_toRightOf="@id/imageView"
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/seogei"
+                android:inputType="datetime"
+                android:text="2:30"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                 />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/seogei"
+                android:text="PM"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

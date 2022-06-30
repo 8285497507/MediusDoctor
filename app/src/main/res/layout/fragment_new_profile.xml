@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".fragments.NewProfile_Fragment">
+<!--    <include layout="@layout/toolbar"/>-->
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:id="@+id/proofileview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_gravity="center"
+        android:elevation="@dimen/_3sdp"
+        android:background="@drawable/profile_header_background"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_setting"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:background="@drawable/ic_settings" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/profileimage"
+            android:layout_width="@dimen/_144sdp"
+            android:layout_height="@dimen/_144sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:src="@drawable/male"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_margin="@dimen/_5ssp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profileimage"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:inputType="text"
+                android:text="Dr.Deepak Kumar"
+                android:textColor="#6F6F6F"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:fontFamily="@font/seogei"
+                android:textSize="@dimen/_15ssp" />
+
+            <TextView
+                android:id="@+id/userdegree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="MBBS , MD"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/seogei"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/tvmobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text=""
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/seogei"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:backgroundTint="@color/blue"
+            android:id="@+id/profileedite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/_30sdp"
+            android:minHeight="@dimen/_30sdp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:src="@drawable/pen_icon" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/proofileview"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/_5sdp"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:elevation="@dimen/_2sdp"
+            android:fontFamily="@font/seogei"
+            android:padding="@dimen/_5ssp"
+            app:tabIndicatorAnimationDuration="@integer/material_motion_duration_short_1"
+            app:tabIndicatorFullWidth="true"
+            app:tabIndicatorGravity="bottom"
+            app:tabMode="fixed"
+            android:visibility="gone"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextAppearance="@style/TextAppearance.AppCompat"
+            app:tabTextColor="@color/gray">
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="10dp"
+                android:overScrollMode="never" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".schedule_appointment"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/appointment_calender"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_back_arrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@drawable/appointment_calender"
+            android:gravity="center"
+            android:paddingLeft="@dimen/_18ssp"
+            android:fontFamily="@font/seogei"
+            android:text="Schedule Appointment"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_42sdp"
+        android:layout_margin="@dimen/_8sdp"
+        android:orientation="horizontal">
+
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingLeft="@dimen/_8sdp"
+            android:textSize="@dimen/_16sdp"
+            android:fontFamily="@font/seogei"
+            android:dropDownSelector="@drawable/ccp_ic_arrow_drop_down"
+            android:entries="@array/Hospitialname"
+            />
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:src="">-->
+
+<!--        </androidx.appcompat.widget.AppCompatImageView>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="vertical"
+        >
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:text="Add new session"
+            android:textColor="#0D21DD"
+            android:gravity="center"
+            android:fontFamily="@font/seogei"
+            android:background="@drawable/text_field"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:text="Add new session"
+            android:textColor="#0D21DD"
+            android:gravity="center"
+            android:fontFamily="@font/seogei"
+            android:background="@drawable/text_field" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="Add new session"
+            android:textColor="#0D21DD"
+            android:fontFamily="@font/seogei"
+            android:gravity="center"
+            android:background="@drawable/text_field" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:text="Add new session"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="#0D21DD"
+            android:gravity="center"
+            android:fontFamily="@font/seogei"
+            android:background="@drawable/text_field" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:text="Add new session"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="#0D21DD"
+            android:gravity="center"
+            android:fontFamily="@font/seogei"
+            android:background="@drawable/text_field" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:text="Add new session"
+            android:textColor="#0D21DD"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:gravity="center"
+            android:fontFamily="@font/seogei"
+            android:background="@drawable/text_field" />
+
+
+</LinearLayout>
+</LinearLayout>

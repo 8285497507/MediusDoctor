@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Medius Doctor App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="profile">My profile</string>
+    <string name="timer">Appointment history</string>
+    <string name="chart">Schedule Appointment</string>
+    <string name="home">My Appointment</string>
+    <string name="add_more">Add More</string>
+    <string name="QulifactionDetail">Qualification Detail </string>
+    <string name="BasicDetail">Basic Detail</string>
+    <string name="RegistationDetail">Registation Detail</string>
+    <string name="KYCDetail">KYC Detail</string>
+    <string name="PracticeDetail">Practice Details</string>
+    <string name="Splization">Specialization</string>
+    <array name="Hospitialname">
+        <item>Hindu Rao</item>
+        <item>Hindu Rao</item>
+        <item>Hindu Rao</item>
+        <item>Hindu Rao</item>
+    </array>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="about_us">About us</string>
+    <string name="logout">Logout</string>
+    <string name="Rs">\u20B9</string>
+    <string name="helpsupport"><![CDATA[Help & support]]></string>
+    <string name="rateus">Rate us</string>
+    <string name="app">Medius Doctor</string>
+    <string name="enetrmobno">Enter Your\nMobile Number</string>
+    <string name="wesend">We will send a confirmation code</string>
+    <string name="resend"><u>Resend code</u></string>
+    <string name="thankyou">" Thank You !!"</string>
+    <string name="verified">"Your profile will be verified soon.  "</string>
+</resources>

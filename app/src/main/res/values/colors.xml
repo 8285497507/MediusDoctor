@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_700">#013270</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="Blue11">#28328C</color>
+    <color name="white11">#222222</color>
+<!--    //<color name="blue">#4177bc</color>-->
+    <color name="blue">#229BFF</color>
+    <color name="gray">#5C5C5C</color>
+    <color name="lightgray">#F4F4F4</color>
+    <color name="orange">#FF9800</color>
+    <color name="red">#FF5F5F</color>
+    <color name="app_theme">#FF5F5F</color>
+    <color name="toolbarcolor">#565656</color>
+    <color name="textcolor">#757575</color>
+    <color name="editboxselected">#ABA9A9</color>
+    <color name="menublack">#545454</color>
+    <color name="grey_dark">#716F6F</color>
+    <color name="folow_upcolor">#3EBAFF</color>
+    <color name="newapnmntcolor">#10847E</color>
+    <color name="canceled_color">#FFE4E4</color>
+</resources>
