@@ -6,14 +6,17 @@
     android:id="@+id/mRelativeAdddearch"
     android:background="@color/white">
 
-    <include layout="@layout/toolbar" />
+    <include
+        android:id="@+id/toolbar2"
+        layout="@layout/toolbar2" />
 
 
     <View
         android:id="@+id/view1"
-        android:layout_below="@+id/toolbar"
+        android:layout_below="@+id/toolbar2"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
+
         android:background="#757575"
         />
 

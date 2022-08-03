@@ -237,7 +237,7 @@ public class AppointmentsFragment extends BaseFragmentJava implements DatePicker
 
     private void setspinner(List<HospitalDetail> hospitalList) {
         Hospitalname.clear();
-        Hospitalname.add(0, "Select Hospital");
+        Hospitalname.add(0, "All Hospital");
         for (int i = 0; i <= hospitalList.size() - 1; i++) {
             Hospitalname.add(hospitalList.get(i).getName());
             hospitalDetails.add(hospitalList.get(i));

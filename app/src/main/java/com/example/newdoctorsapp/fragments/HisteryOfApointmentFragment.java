@@ -25,6 +25,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
@@ -84,6 +85,8 @@ public class HisteryOfApointmentFragment extends BaseFragmentJava implements Dat
     RelativeLayout rel_historyhospital;
     ArrayList<HospitalApprovalData> hospitalApprovalData = new ArrayList<>();
     AppCompatTextView tv_title;
+    ImageButton btn_back;
+
     public HisteryOfApointmentFragment(Context context) {
         this.context = context;
     }
@@ -123,7 +126,16 @@ public class HisteryOfApointmentFragment extends BaseFragmentJava implements Dat
         hospitalDetails = new ArrayList<>();
         recyclerView = view.findViewById(R.id.recyclerview);
         tv_title = view.findViewById(R.id.tv_title);
-        tv_title.setText("Doctor List");
+        btn_back = view.findViewById(R.id.btn_back);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                getActivity().onBackPressed();
+            }
+        });
+        tv_title.setText("Hospital List");
         rel_historyhospital = view.findViewById(R.id.rel_historyhospital);
         mFoatingAddHospital = view.findViewById(R.id.mFoatingAddHospital);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

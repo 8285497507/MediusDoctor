@@ -70,7 +70,7 @@ public class AppoinmentScedule extends BaseFragmentJava implements CustomDays.Se
     EditText edt_consult_fee;
     Spinner spin_prescription;
     ArrayAdapter<String> array_validaday;
-    CustomDays.SendData customdays;
+    CustomDays.SendData sendData;
     View view;
     AppCompatTextView tv_title;
     ImageButton btn_back;
@@ -82,13 +82,17 @@ public class AppoinmentScedule extends BaseFragmentJava implements CustomDays.Se
     @Override
     protected View onCreateViewPost(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view=inflater.inflate(R.layout.activity_appoinment_scedule, container, false);
-        customdays = this;
+        sendData = this;
         INit(view);
 
         add_day.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CustomDays customDays = new CustomDays(getActivity(),customdays);
+                if(spin_doctor.getSelectedItemPosition()==0){
+                    Utils.ShowNotFound(getActivity(),"Please select hospital First");
+                    return;
+                }
+                CustomDays customDays = new CustomDays(getActivity(),sendData);
                 customDaysArrayList.add(customDays);
                 ll_time_slot.addView(customDays);
 
@@ -138,8 +142,8 @@ public class AppoinmentScedule extends BaseFragmentJava implements CustomDays.Se
         });
 
         ArrayList<String> daysname = new ArrayList<>();
-        for (int i = 1; i <= 15; i++) {
-            daysname.add("day " + i);
+        for (int i = 1; i <= 30; i++) {
+            daysname.add("" + i);
         }
         array_validaday = new ArrayAdapter<>(getActivity(),android.R.layout.simple_dropdown_item_1line, daysname);
         spin_prescription.setAdapter(array_validaday);
@@ -283,7 +287,7 @@ public class AppoinmentScedule extends BaseFragmentJava implements CustomDays.Se
     }
 
     private void SetAllDAta(List<com.example.newdoctorsapp.models.working_hour.WorkingHour> workingHourList, int i) {
-        CustomDays customDays = new CustomDays(getActivity(),customdays);
+        CustomDays customDays = new CustomDays(getActivity(),sendData);
         customDays.spin_ft.setText(workingHourList.get(i).getFrom().getTime() + ":" + workingHourList.get(i).getFrom().getDivision());
         customDays.spin_tt.setText(workingHourList.get(i).getTill().getTime() + ":" + workingHourList.get(i).getTill().getDivision());
         customDays.spin_cap.setSelection(workingHourList.get(i).getDays().get(0).getCapacity() - 1);

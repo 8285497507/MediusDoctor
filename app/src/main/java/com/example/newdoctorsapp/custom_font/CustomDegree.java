@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.example.newdoctorsapp.R;
 import com.example.newdoctorsapp.models.getQualiModel.GetQualiData;
@@ -42,6 +43,16 @@ public class CustomDegree  extends LinearLayout {
         spin_degree.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                TextView tv = (TextView) view.findViewById(android.R.id.text1);
+                switch (position) {
+                    case 0:
+                        tv.setTextColor(android.graphics.Color.GRAY);
+                        break;
+
+                    default:
+                        tv.setTextColor(getResources().getColor(R.color.colorPrimary));
+                        break;
+                }
                 if(position==0){
                     degreeInterface.send_degree_id("-1");
                     return;

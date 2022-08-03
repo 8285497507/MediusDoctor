@@ -38,11 +38,12 @@ class SplaceActivity : BaseActivityJava() {
                      // MediusApp.getBoolean(this,SESSION, false)
                       //  startActivity(Intent(this, Profile_Activity::class.java))
                         startActivity(Intent(this, MainActivity::class.java))
+                     //   startActivity(Intent(this, AddQualificationDetailActivity::class.java))
 
                  }else{
                    startActivity(Intent(this, PhoneNumberActivity::class.java))
                  // startActivity(Intent(this, Basic_Details_Activity2::class.java))
-              // startActivity(Intent(this, AddQualificationDetailActivity::class.java))
+            //   startActivity(Intent(this, AddQualificationDetailActivity::class.java))
              // startActivity(Intent(this, Registration_Details_Activity::class.java))
                // startActivity(Intent(this, Activity_Kyc_details::class.java))
 

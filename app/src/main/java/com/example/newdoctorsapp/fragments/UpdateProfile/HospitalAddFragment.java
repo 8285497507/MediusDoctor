@@ -7,11 +7,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -39,7 +41,8 @@ public class HospitalAddFragment extends BaseFragmentJava implements Callback<Se
    RecyclerView rcv_searhhospital;
    SearchAddHospitalData searchAddHospitalData;
   ServiceModel serviceModel=new ServiceModel();
-
+    AppCompatTextView tv_title;
+    ImageButton btn_back;
     @Override
     public Observable getModel() {
         return serviceModel;
@@ -59,7 +62,18 @@ public class HospitalAddFragment extends BaseFragmentJava implements Callback<Se
         mProgreeBar = getView().findViewById(R.id.mProgreeBar);
         mRelativeAdddearch = getView().findViewById(R.id.mRelativeAdddearch);
         rcv_searhhospital = getView().findViewById(R.id.rcv_searhhospital);
+        btn_back = getView().findViewById(R.id.btn_back);
+        tv_title = getView().findViewById(R.id.tv_title);
+        tv_title.setText("Add Hospital");
 
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                getActivity().onBackPressed();
+            }
+        });
 
         rcv_searhhospital.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         rcv_searhhospital.setHasFixedSize(true);

@@ -7,6 +7,7 @@ import static com.example.newdoctorsapp.utility.Constants.USER_TOKEN_ID;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -57,6 +58,8 @@ import com.example.newdoctorsapp.utility.SharedPrefrancess;
 import com.example.newdoctorsapp.utility.Utils;
 import com.example.newdoctorsapp.workspace.RetrofitHelper;
 import com.google.gson.Gson;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -236,6 +239,16 @@ public class AddQualificationDetailActivity extends BaseActivityJava implements 
                 specialization.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        TextView tv = (TextView) view.findViewById(android.R.id.text1);
+                        switch (position) {
+                            case 0:
+                                tv.setTextColor(android.graphics.Color.GRAY);
+                                break;
+
+                            default:
+                                tv.setTextColor(getResources().getColor(R.color.colorPrimary));
+                                break;
+                        }
                         if(position==0){
                             return;
                         }

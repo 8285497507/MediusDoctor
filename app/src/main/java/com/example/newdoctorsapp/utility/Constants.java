@@ -1,7 +1,9 @@
 package com.example.newdoctorsapp.utility;
 
+import com.example.demod.RXCalling.ServiceInterface;
+
 public class Constants {
-    public final static String BASE_URL = "http://18.218.162.226:3000/";
+    public final static String BASE_URL = ServiceInterface.Companion.getBASE_URL();//"http://3.18.254.171:3000/";
      public final static String TOKEN_ID = "tokenId";
      public final static String SESSION= "session";
      public final static String ERROR= "Oops...";

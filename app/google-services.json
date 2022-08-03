@@ -1,33 +1,62 @@
 {
   "project_info": {
-    "project_number": "58087248008",
-    "project_id": "medius-doctor-app-b1e21",
-    "storage_bucket": "medius-doctor-app-b1e21.appspot.com"
+    "project_number": "675342698873",
+    "project_id": "medius-clinic-27b53",
+    "storage_bucket": "medius-clinic-27b53.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:58087248008:android:198563937c3d48b294cf3d",
+        "mobilesdk_app_id": "1:675342698873:android:72efd7f30d962cba3787a8",
         "android_client_info": {
-          "package_name": "com.example.newdoctorsap"
+          "package_name": "com.medius.clinic"
         }
       },
       "oauth_client": [
         {
-          "client_id": "58087248008-hrhh1t8v3od8vf3o6h3l8g1n4iaf8f0t.apps.googleusercontent.com",
+          "client_id": "675342698873-66t2outa07sa4u8173cjafiqs8tm94m1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBVDPbYNm8_cC7Ng3JyJHWisvC9uebDpGE"
+          "current_key": "AIzaSyDG8avUZ3mbjQtTpF5gRWBNNngpZWK-zrw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "58087248008-hrhh1t8v3od8vf3o6h3l8g1n4iaf8f0t.apps.googleusercontent.com",
+              "client_id": "675342698873-66t2outa07sa4u8173cjafiqs8tm94m1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675342698873:android:fe6cec1809e274a83787a8",
+        "android_client_info": {
+          "package_name": "com.medius.doctor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "675342698873-66t2outa07sa4u8173cjafiqs8tm94m1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG8avUZ3mbjQtTpF5gRWBNNngpZWK-zrw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "675342698873-66t2outa07sa4u8173cjafiqs8tm94m1.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

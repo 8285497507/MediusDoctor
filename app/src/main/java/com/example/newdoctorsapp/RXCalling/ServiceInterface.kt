@@ -34,7 +34,7 @@ interface ServiceInterface {
     companion object {
         // val BASE_URL = "https://care360-net-dev.azurewebsites.net/api/"
       //  val BASE_URL = "http://18.224.1.250:3000/"
-        val BASE_URL = "http://18.218.162.226:3000/"
+        val BASE_URL = "http://3.18.254.171:3000/"
 
     }
 
@@ -91,7 +91,7 @@ interface ServiceInterface {
 
     @POST("doctor/getWorkingHours")
     fun GetSession(@Header("auth-header") Authorization: String?,
-                   @Body working: Any): Observable<Working_Hour_Resp>
+                   @Body working: Any): Observable<com.example.newdoctorsapp.models.working_hour.Working_Hour_Resp>
 
     @GET("doctor/getHospitalListByDoctorId/{id}")
     fun GetHospitalbydoctorid(@Header("auth-header") Authorization: String, @Path("id") id: String): Observable<HospitalListBydocId>

@@ -36,7 +36,7 @@ public class CustomDays extends LinearLayout {
     public CustomDays(Context context, SendData sendDat) {
         super(context);
         this.context=context;
-        sendData= (SendData) context;
+       this. sendData= sendDat;
         myView();
 
 

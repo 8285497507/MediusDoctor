@@ -9,6 +9,7 @@
     android:orientation="vertical"
     android:id="@+id/rel_historyhospital"
     tools:context=".fragments.HisteryOfApointmentFragment">
+
     <include
         android:id="@+id/tlb1"
         layout="@layout/toolbar2" />
