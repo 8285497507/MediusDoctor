@@ -10,6 +10,11 @@
 <include
     layout="@layout/toolbar2"
     />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".2dp"
+        android:background="@color/grey_dark"
+        />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

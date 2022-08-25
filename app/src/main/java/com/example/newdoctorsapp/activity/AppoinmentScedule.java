@@ -145,7 +145,7 @@ public class AppoinmentScedule extends BaseFragmentJava implements CustomDays.Se
         for (int i = 1; i <= 30; i++) {
             daysname.add("" + i);
         }
-        array_validaday = new ArrayAdapter<>(getActivity(),android.R.layout.simple_dropdown_item_1line, daysname);
+        array_validaday = new ArrayAdapter<>(getActivity(),R.layout.dropdownitem, daysname);
         spin_prescription.setAdapter(array_validaday);
         spin_prescription.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

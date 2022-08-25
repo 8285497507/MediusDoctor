@@ -1,6 +1,5 @@
 package com.example.newdoctorsapp.models.SearchAddHospitalModel;
 
-import com.example.newdoctorsapp.models.DoctorApointmentList.Location;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 

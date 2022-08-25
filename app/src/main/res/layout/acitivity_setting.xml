@@ -154,6 +154,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/rel_rate_us"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp">
 
@@ -165,9 +166,9 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/_25sdp"
                 android:fontFamily="@font/robotoregular"
-                android:textStyle="bold"
                 android:text="Rate Us"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textStyle="bold" />
 
             <View
                 android:layout_below="@+id/rateus"

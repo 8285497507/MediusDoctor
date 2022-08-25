@@ -1,9 +1,7 @@
 package com.example.newdoctorsapp.adapter;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,15 +12,15 @@ import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.newdoctorsapp.R;
-import com.example.newdoctorsapp.models.DoctorApointmentList.Datum;
+import com.example.newdoctorsapp.models.DoctorApointmentList.Data;
 
 import java.util.List;
 
 public class DoctorAppointAdopter extends RecyclerView.Adapter<DoctorAppointAdopter.MyViewHolder> {
     private Context context;
-    private List<Datum> data;
+    private List<Data> data;
 
-    public DoctorAppointAdopter(Context context, List<Datum> data) {
+    public DoctorAppointAdopter(Context context, List<Data> data) {
         this.context=context;
         this.data=data;
     }
@@ -39,14 +37,28 @@ public class DoctorAppointAdopter extends RecyclerView.Adapter<DoctorAppointAdop
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        Datum datum=data.get(position);
+        Data datum=data.get(position);
 
         String string = data.get(position).getPatient().getAge();
         String parts =  string.split("\\.")[0];
 //        String part1 =string.split("\\.")[1];
+         try{
 
-        holder.pacentname.setText(datum.getPatient().getFirstName()+" "+datum.getPatient().getLastName());
-        holder.pacentdetail.setText(datum.getPatient().getGender()+" | "+parts+" "+"yrs");
+             string = data.get(position).getSubPatient().getDOB();
+             parts =  string.split("\\.")[0];
+             holder.pacentname.setText(datum.getSubPatient().getFirstName()+" "+datum.getSubPatient().getLastName());
+             holder.pacentdetail.setText(datum.getSubPatient().getGender()+" | "+parts+" "+"yrs");
+
+         }
+         catch (Exception e){
+             string = data.get(position).getPatient().getAge();
+             parts =  string.split("\\.")[0];
+             holder.pacentname.setText(datum.getPatient().getFirstName()+" "+datum.getPatient().getLastName());
+             holder.pacentdetail.setText(datum.getPatient().getGender()+" | "+parts+" "+"yrs");
+
+         }
+
+
         holder.hospitalname.setText(datum.getHospital().getName());
         holder.time.setText(datum.getTime().getFrom().getTime()+" "+"To"+" "+datum.getTime().getTill().getTime());
         if(datum.getPatient().getGender().equalsIgnoreCase("Male")){

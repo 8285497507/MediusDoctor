@@ -20,6 +20,7 @@ import java.util.*
 
 class SplaceActivity : BaseActivityJava() {
     var serviceModel = ServiceModel()
+    var a=0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.setFlags(
@@ -27,30 +28,7 @@ class SplaceActivity : BaseActivityJava() {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
         setContentView(R.layout.activity_splace2)
-         if(MediusApp.GetPhonenumber(this,"number")!=null && MediusApp.GetPhonenumber(this,"number")!=""&& !MediusApp.getBoolean(this,Constants.SESSION,false)){
-            if(Utils.haveInternet(this)){
-                mycustomdialog.show()
-                serviceModel.doPostJSonRequest( UserVerifaction(MediusApp.GetPhonenumber(this,"number")),API_USERVERIFACTION)
-            }
-        }else{
-             Handler().postDelayed({
-                 if(MediusApp.getBoolean(this,Constants.SESSION,false)){
-                     // MediusApp.getBoolean(this,SESSION, false)
-                      //  startActivity(Intent(this, Profile_Activity::class.java))
-                        startActivity(Intent(this, MainActivity::class.java))
-                     //   startActivity(Intent(this, AddQualificationDetailActivity::class.java))
 
-                 }else{
-                   startActivity(Intent(this, PhoneNumberActivity::class.java))
-                 // startActivity(Intent(this, Basic_Details_Activity2::class.java))
-            //   startActivity(Intent(this, AddQualificationDetailActivity::class.java))
-             // startActivity(Intent(this, Registration_Details_Activity::class.java))
-               // startActivity(Intent(this, Activity_Kyc_details::class.java))
-
-                 }
-                 finish()
-             }, 3000)
-        }
 
 //        if(Utils.haveInternet(this)){
 //            serviceModel.doPostJSonRequest( UserVerifaction("8601500190"),API_USERVERIFACTION)
@@ -59,6 +37,42 @@ class SplaceActivity : BaseActivityJava() {
 
 
     }
+
+    override fun onResume() {
+        super.onResume()
+        if(MediusApp.GetPhonenumber(this,"number")!=null && MediusApp.GetPhonenumber(this,"number")!="" && !MediusApp.getBoolean(this,Constants.SESSION,false)){
+            if(Utils.haveInternet(this)){
+                mycustomdialog.show()
+                serviceModel.doPostJSonRequest( UserVerifaction(MediusApp.GetPhonenumber(this,"number")),API_USERVERIFACTION)
+            }
+        }else{
+            Handler().postDelayed({
+                if(MediusApp.getBoolean(this,Constants.SESSION,false) && a==0 ){
+                        a=1
+                        startActivity(Intent(this, MainActivity::class.java))
+                   }
+                 else if(MediusApp.getBoolean(this,Constants.SESSION,false) && a==1 ){
+                        a=0
+                       finish()
+                   }
+                  else if(a==2){
+                      a=0
+                      finish()
+                  }
+                else{
+                    startActivity(Intent(this, PhoneNumberActivity::class.java))
+                    a=2
+                    // startActivity(Intent(this, Basic_Details_Activity2::class.java))
+                    //   startActivity(Intent(this, AddQualificationDetailActivity::class.java))
+                    // startActivity(Intent(this, Registration_Details_Activity::class.java))
+                    // startActivity(Intent(this, Activity_Kyc_details::class.java))
+
+                }
+                //   finish()
+            }, 100)
+
+        }}
+
 
     override fun update(o: Observable?, arg: Any?) {
         mycustomdialog.dismiss()
@@ -83,13 +97,20 @@ class SplaceActivity : BaseActivityJava() {
                 }
 
             }else if (loginresponce?.status== ERROR_STATUS){
-                startActivity(Intent(this, PhoneNumberActivity::class.java))
-              /*  dialog(loginresponce.message, "Profile Status", SweetAlertDialog.WARNING_TYPE).setConfirmText("Ok").setConfirmClickListener { sweetAlertDialog ->
+                if(a==2){
+                    finish()
+                }
+                else{
+                    a=2
+                    startActivity(Intent(this, PhoneNumberActivity::class.java))
+
+                }
+                /*  dialog(loginresponce.message, "Profile Status", SweetAlertDialog.WARNING_TYPE).setConfirmText("Ok").setConfirmClickListener { sweetAlertDialog ->
                     sweetAlertDialog.dismissWithAnimation()
                     finishAffinity()
                     finish()
                 }*/
-
+              //  finish()
 
             }
         }else{

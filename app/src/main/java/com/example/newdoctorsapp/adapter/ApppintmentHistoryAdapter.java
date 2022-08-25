@@ -86,6 +86,7 @@ public class ApppintmentHistoryAdapter extends RecyclerView.Adapter<ApppintmentH
 
            if (apnmtdata.get(position).getAppointmentType().equals("Follow up")){
                holder.relbookdetails.setBackgroundResource(R.color.folow_upcolor);
+               holder.apnmenttype.setText("Follow up");
            }else if (apnmtdata.get(position).getAppointmentType().equals("Fresh")){
                holder.relbookdetails.setBackgroundResource(R.color.newapnmntcolor);
                holder.apnmenttype.setText("New Appointment");
@@ -111,9 +112,10 @@ public class ApppintmentHistoryAdapter extends RecyclerView.Adapter<ApppintmentH
                 i.putExtra("ddateofbooking",holder.daybooking.getText());
                 i.putExtra("apnmtId",apnmtdata.get(position).getId());
                 i.putExtra("dayofapnmnt",holder.doa.getText());
+                i.putExtra("apnmenttype",holder.apnmenttype.getText().toString());
                 Log.d("sdsdd","***sds*"+holder.daybooking.getText());
                 i.putExtra("hospitalname",apnmtdata.get(position).getHospital().getName());
-                i.putExtra("apnmenttype",apnmtdata.get(position).getAppointmentType());
+              //  i.putExtra("apnmenttype",apnmtdata.get(position).getAppointmentType());
                 i.putExtra("specilization",apnmtdata.get(position).getSpecials().get(0).getSpecialityName());
                 i.putExtra("docname",apnmtdata.get(position).getDoctors().getFirstName()+" "+
                         apnmtdata.get(position).getDoctors().getLastName());

@@ -1,9 +1,6 @@
 package com.example.newdoctorsapp.fragments;
 
-import static com.example.newdoctorsapp.MediusApp.getContext;
-import static com.example.newdoctorsapp.utility.Constants.API_GTHOSPITALLISTBYDOCTORID;
 import static com.example.newdoctorsapp.utility.Constants.API_POSTAPPOINTMENTLIST;
-import static com.example.newdoctorsapp.utility.Constants.SUCCESS_STATUS;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -34,29 +31,20 @@ import com.example.newdoctorsapp.R;
 import com.example.newdoctorsapp.RXCalling.BaseFragmentJava;
 import com.example.newdoctorsapp.adapter.DoctorAppointAdopter;
 import com.example.newdoctorsapp.adapter.HospitalApprovalAdapter;
-import com.example.newdoctorsapp.adapter.SearchHospitalAdapter;
 import com.example.newdoctorsapp.fragments.UpdateProfile.HospitalAddFragment;
 import com.example.newdoctorsapp.models.Appointment.Datetime;
 import com.example.newdoctorsapp.models.Appointment.HospitalidwithDate;
-import com.example.newdoctorsapp.models.DoctorApointmentList.Datum;
-import com.example.newdoctorsapp.models.DoctorApointmentList.DoctorAppointmentList;
+import com.example.newdoctorsapp.models.DoctorApointmentList.Data;
 import com.example.newdoctorsapp.models.HospitalApprovalList.HospitalApprovalData;
 import com.example.newdoctorsapp.models.HospitalApprovalList.HospitalApprovalResponse;
 import com.example.newdoctorsapp.models.HospitalList.Address;
 import com.example.newdoctorsapp.models.HospitalList.HospitalDetail;
-import com.example.newdoctorsapp.models.HospitalList.HospitalListBydocId;
 import com.example.newdoctorsapp.utility.Utils;
 import com.example.newdoctorsapp.workspace.RetrofitHelper;
-import com.example.newdoctorsapp.workspace.appointmentshedulemodel.AppointmentWorkingHour;
 import com.github.jhonnyx2012.horizontalpicker.DatePickerListener;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 
 import org.joda.time.DateTime;
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -175,7 +163,7 @@ public class HisteryOfApointmentFragment extends BaseFragmentJava implements Dat
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    private void setRecycleview(List<Datum> data) {
+    private void setRecycleview(List<Data> data) {
         appointAdopter = new DoctorAppointAdopter(context, data);
         recyclerView.setAdapter(appointAdopter);
         appointAdopter.notifyDataSetChanged();

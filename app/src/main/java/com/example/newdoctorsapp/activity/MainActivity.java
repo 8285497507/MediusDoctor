@@ -124,10 +124,6 @@ public class MainActivity extends BaseActivityJava implements View.OnClickListen
                 dialog(getuserdata().getFirstName() + " " + getuserdata().getLastName(), "Do You wont to Exit !", SweetAlertDialog.WARNING_TYPE).setConfirmText("Yes").setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                     @Override
                     public void onClick(SweetAlertDialog sweetAlertDialog) {
-                        Intent intent = new Intent();
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                        startActivity(intent);
-                        finish();
                         finishAffinity();
                         sweetAlertDialog.dismissWithAnimation();
                     }

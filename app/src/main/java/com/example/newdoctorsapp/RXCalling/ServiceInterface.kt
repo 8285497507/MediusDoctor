@@ -20,7 +20,6 @@ import com.example.newdoctorsapp.models.SpecialityBodyPartAndDisease.SpecialityB
 import com.example.newdoctorsapp.models.feevalidity.GetFeeValidity
 import com.example.newdoctorsapp.models.login.Loginresponce
 import com.example.newdoctorsapp.models.login.OtpVerifaction
-import com.example.newdoctorsapp.models.working_hour.Working_Hour_Resp
 import io.reactivex.Observable
 import retrofit2.http.*
 
@@ -34,8 +33,11 @@ interface ServiceInterface {
     companion object {
         // val BASE_URL = "https://care360-net-dev.azurewebsites.net/api/"
       //  val BASE_URL = "http://18.224.1.250:3000/"
-        val BASE_URL = "http://3.18.254.171:3000/"
+       // val BASE_URL = "http://3.18.254.171:3000/"
 
+         val BASE_URL = "http://18.220.60.149:3000/" //production
+        //  val BASE_URL = "http://3.18.254.171:3000/" //Dev_Elastic
+        // val BASE_URL = "http://3.141.91.35:3000/" //stage
     }
 
     // yha prtype kro

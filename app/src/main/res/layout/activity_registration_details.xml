@@ -90,6 +90,8 @@
             android:layout_marginTop="@dimen/_3sdp"
             android:fontFamily="@font/seogei"
             android:inputType="number"
+            android:textColor="@color/menublack"
+            android:backgroundTint="@color/grey_dark"
             android:paddingLeft="@dimen/_10sdp"
             android:minHeight="@dimen/_30sdp"
            />
@@ -131,7 +133,8 @@
             android:imeOptions="actionDone"
             android:fontFamily="@font/seogei"
             android:minHeight="@dimen/_30sdp"
-            android:textColorHint="#545454" />
+            android:textColor="@color/menublack"
+            android:backgroundTint="@color/grey_dark" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -170,7 +173,8 @@
             android:focusableInTouchMode="false"
             android:fontFamily="@font/seogei"
             android:paddingLeft="@dimen/_10sdp"
-            android:textColor="#545454" />
+            android:textColor="@color/menublack"
+            android:backgroundTint="@color/grey_dark" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

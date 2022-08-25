@@ -68,7 +68,7 @@ public class CustomDays extends LinearLayout {
         for(int i=1;i<=200;i++){
             count[i-1]=String.valueOf(i);
         }
-        capacityadapter=new ArrayAdapter<String>(context, android.R.layout.simple_dropdown_item_1line,count);
+        capacityadapter=new ArrayAdapter<String>(context, R.layout.dropdownitem,count);
         spin_cap.setAdapter(capacityadapter);
         spin_ft.setOnClickListener(new OnClickListener() {
             @Override

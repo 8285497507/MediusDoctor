@@ -4,8 +4,6 @@ import static com.example.newdoctorsapp.MediusApp.getContext;
 import static com.example.newdoctorsapp.utility.Constants.API_GTHOSPITALLISTBYDOCTORID;
 import static com.example.newdoctorsapp.utility.Constants.SUCCESS_STATUS;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -16,13 +14,10 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.demod.RXCalling.ServiceInterface;
 import com.example.demod.RXCalling.ServiceModel;
 
-import com.example.medius.models.approvedoc_req.Appr_from_doc_mod;
 import com.example.newdoctorsapp.MediusApp;
 import com.example.newdoctorsapp.R;
 import com.example.newdoctorsapp.RXCalling.BaseActivityJava;
@@ -33,12 +28,10 @@ import com.example.newdoctorsapp.models.HoliDaycalendarmodel.HolidayCalendarResp
 import com.example.newdoctorsapp.models.HoliDaycalendarmodel.HolidayGetResponse;
 import com.example.newdoctorsapp.models.HospitalList.HospitalDetail;
 import com.example.newdoctorsapp.models.HospitalList.HospitalListBydocId;
-import com.example.newdoctorsapp.models.Submitfeedback.sumitfeedbackmodel;
 import com.example.newdoctorsapp.utility.Constants;
 import com.example.newdoctorsapp.utility.MyProgressDialog;
 import com.example.newdoctorsapp.utility.Utils;
 import com.example.newdoctorsapp.workspace.RetrofitHelper;
-import com.google.android.material.snackbar.Snackbar;
 
 import org.naishadhparmar.zcustomcalendar.CustomCalendar;
 import org.naishadhparmar.zcustomcalendar.OnDateSelectedListener;

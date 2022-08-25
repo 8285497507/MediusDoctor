@@ -25,7 +25,7 @@ public class MediusApp extends Application {
     Context actagedoctor;
 
     private static final String PREF_NAME = "actage";
-    private static final String PREF_NUMBER = "numberactage";
+    private static final String PREF_NUMBER = "actage";
    private  static  MyDatabase myDatabase=null;
     @Override
     public void onCreate() {

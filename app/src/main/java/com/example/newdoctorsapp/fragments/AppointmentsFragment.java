@@ -12,8 +12,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -37,7 +35,7 @@ import com.example.newdoctorsapp.adapter.HospitalSpinnerAdapter;
 import com.example.newdoctorsapp.interfaces.HospitlNameCallback;
 import com.example.newdoctorsapp.models.Appointment.Datetime;
 import com.example.newdoctorsapp.models.Appointment.HospitalidwithDate;
-import com.example.newdoctorsapp.models.DoctorApointmentList.Datum;
+import com.example.newdoctorsapp.models.DoctorApointmentList.Data;
 import com.example.newdoctorsapp.models.DoctorApointmentList.DoctorAppointmentList;
 import com.example.newdoctorsapp.models.HospitalList.HospitalDetail;
 import com.example.newdoctorsapp.models.HospitalList.HospitalListBydocId;
@@ -47,7 +45,6 @@ import com.github.jhonnyx2012.horizontalpicker.DatePickerListener;
 import org.joda.time.DateTime;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Observable;
@@ -210,7 +207,7 @@ public class AppointmentsFragment extends BaseFragmentJava implements DatePicker
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    private void setRecycleview(List<Datum> data) {
+    private void setRecycleview(List<Data> data) {
         appointAdopter = new DoctorAppointAdopter(context, data);
         recyclerView.setAdapter(appointAdopter);
         appointAdopter.notifyDataSetChanged();

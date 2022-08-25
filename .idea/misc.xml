@@ -6,6 +6,28 @@
         <entry key="../../../../../layout/custom_preview.xml" value="0.184375" />
         <entry key="../../../.gradle/caches/transforms-3/36b063da9d4f968b59fa5ac0486eaff8/transformed/appcompat-1.4.0/res/layout/support_simple_spinner_dropdown_item.xml" value="0.1069078947368421" />
         <entry key="../../../.gradle/caches/transforms-3/e3fcdfd64edd3e75cf49519b46d7bf37/transformed/jetified-ccp-2.5.4/res/drawable/ccp_ic_arrow_drop_down.xml" value="0.11710526315789474" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/drawable/rect_shadow.xml" value="0.161" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/layout/acitivity_setting.xml" value="0.1" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/layout/activity_add_qualificationdetail.xml" value="0.12894736842105264" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/layout/activity_apnmnthistory.xml" value="0.1" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/layout/activity_appoinment_scedule.xml" value="0.12894736842105264" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/layout/activity_basic_details2.xml" value="0.12894736842105264" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/layout/activity_demo.xml" value="0.1" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/layout/activity_kyc_details.xml" value="0.1" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/layout/activity_otp_verification.xml" value="0.1" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/layout/activity_registration_details.xml" value="0.1" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/layout/adapter_apnmnthistory.xml" value="0.1118421052631579" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/layout/adapter_approvaladapter.xml" value="0.12894736842105264" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/layout/appointmentlist.xml" value="0.12894736842105264" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/layout/custom_degree_org.xml" value="0.12894736842105264" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/layout/custom_time_slot.xml" value="0.12894736842105264" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/layout/dropdownitem.xml" value="0.12894736842105264" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/layout/fragment_appointments.xml" value="0.11611842105263158" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/layout/fragment_histery_of_apointment.xml" value="0.12894736842105264" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/layout/fragment_new_profile.xml" value="0.12894736842105264" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/layout/fragment_profile_detail.xml" value="0.1" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/layout/toolbar2.xml" value="0.12894736842105264" />
+        <entry key="..\:/GItHub/MediusDoctor/app/src/main/res/menu/bottom_navigation.xml" value="0.12894736842105264" />
         <entry key="..\:/NewDoctorsapp/app/src/main/res/drawable-xxhdpi/rect_shadow.xml" value="0.25" />
         <entry key="..\:/NewDoctorsapp/app/src/main/res/drawable/addnewsession_bg.xml" value="0.2265" />
         <entry key="..\:/NewDoctorsapp/app/src/main/res/drawable/appointment_calender.xml" value="0.2265" />

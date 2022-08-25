@@ -3,6 +3,7 @@ package com.example.newdoctorsapp.activity;
 import static com.example.newdoctorsapp.utility.Constants.SESSION;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -22,7 +23,7 @@ public class SettingActivity extends BaseActivityJava {
 
  //   Toolbar toolbar;
 
-    RelativeLayout relativecontact,rel_noti,rel_privacypolicy, rel_termscondn, rel_aboutus,rel_logout;
+    RelativeLayout relativecontact,rel_noti,rel_privacypolicy, rel_termscondn,rel_rate_us, rel_aboutus,rel_logout;
 
     @Override
     public Observable getModel() {
@@ -39,9 +40,21 @@ public class SettingActivity extends BaseActivityJava {
         rel_aboutus =  findViewById(R.id.rel_aboutus);
         rel_privacypolicy =  findViewById(R.id.rel_privacypolicy);
         rel_termscondn =  findViewById(R.id.rel_termscondn);
+        rel_rate_us =  findViewById(R.id.rel_rate_us);
         rel_noti = findViewById(R.id.rel_noti);
         rel_logout = findViewById(R.id.rel_logout);
 
+        rel_rate_us.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                } catch (android.content.ActivityNotFoundException anfe) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+                }
+            }
+        });
         relativecontact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -96,10 +109,11 @@ public class SettingActivity extends BaseActivityJava {
                     public void onClick(SweetAlertDialog sweetAlertDialog) {
                         MediusApp.clearSharePref();
                         MediusApp.saveBoolean(SESSION, false);
-                        Intent intent = new Intent(getApplicationContext(), PhoneNumberActivity.class);
+                        finish();
+                        Intent intent = new Intent(getApplicationContext(), SplaceActivity.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_ANIMATION);
                         startActivity(intent);
-                        finish();
+
                         sweetAlertDialog.dismissWithAnimation();
                     }
                 }).setCancelText("Cancel").setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {

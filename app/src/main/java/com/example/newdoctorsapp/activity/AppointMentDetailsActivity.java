@@ -113,10 +113,14 @@ public class AppointMentDetailsActivity extends BaseActivityJava implements Call
         if (response.isSuccessful()){
             mydialog.hide();
             if (response.body().getStatus().equals(200)){
-                convfee.setText("₹"+response.body().getData().get(0).getFeeAmount()+"");
-                paymentgatefee.setText("₹"+response.body().getData().get(1).getFeeAmount()+"");
-                taxes.setText("₹"+response.body().getData().get(2).getFeeAmount()+"");
-                taxall = response.body().getData().get(0).getFeeAmount()+response.body().getData().get(1).getFeeAmount()+response.body().getData().get(2).getFeeAmount();
+                try{
+                    convfee.setText("₹"+response.body().getData().get(0).getFeeAmount()+"");
+                    paymentgatefee.setText("₹"+response.body().getData().get(1).getFeeAmount()+"");
+                    taxes.setText("₹"+response.body().getData().get(2).getFeeAmount()+"");
+                    taxall = response.body().getData().get(0).getFeeAmount()+response.body().getData().get(1).getFeeAmount()+response.body().getData().get(2).getFeeAmount();
+
+                }
+                catch (Exception e){}
                 } else {
 
                 }
